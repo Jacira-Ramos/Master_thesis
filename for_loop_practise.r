@@ -48,10 +48,15 @@ for (i in 1:29) {
 #After this last error I understood that I selecting the wrong number of columns!
 ##################################------------------
 #I DID IT! I WROTE THE COMMAND BELOW ALONE
+finalcolumn<- c()
+> for (i in 1:ncol(Table_7)) {
+  if (anyNA(Table_7[,i])){
+    temporarycolumn<-names(Table_7)[i]
+    finalcolumn<-c(finalcolumn,temporarycolumn)}
 
-> for (i in 1:16) {
-  as.data.frame(Table7_update <- na.omit(Table_7[,1:16]))
        }
-> View(Table7_update)
+difference<-setdiff(names(Table_7),finalcolumn)
+> Table7_update<-Table_7[,difference]
+
 #final output is 25 rows(4 rows were omitted) and 16 columns without NA
 
