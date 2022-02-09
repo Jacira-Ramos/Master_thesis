@@ -47,12 +47,11 @@ for (i in 1:29) {
 #Error in `[.data.frame`(Table_7, , 1:29) : undefined columns selected
 #After this last error I understood that I selecting the wrong number of columns!
 ##################################------------------
-#I DID IT! i WROTE THE COMMAND BELOW ALONE
+#I DID IT! I WROTE THE COMMAND BELOW ALONE
 
 > for (i in 1:16) {
   as.data.frame(Table7_update <- na.omit(Table_7[,1:16]))
        }
 > View(Table7_update)
-
 #final output is 25 rows(4 rows were omitted) and 16 columns without NA
 
