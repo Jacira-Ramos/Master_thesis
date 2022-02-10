@@ -37,3 +37,15 @@ complicated_function<-function(filename,fileformat){
        }
        return(importedfile)
       }
+csvtable3<-complicated_funtion("table3.csv.csv","csv")
+View(csvtable)
+csvtable4<-complicated_function("Table_4.csv","csv")
+View(csvtable4)
+tsvtable5<-complicated_function("Table_5.tsv","tsv")
+View(tsvtable5)
+tsvtable2<-complicated_function("Table_2.tsv","csv")
+View(tsvtable2)
+txttable<-complicated_function("Table_1.tsv","txt")
+View(txttable)
+urltable<-complicated_function("url","url") #not sure about this part either, have to review
+View(urltable)
