@@ -1,3 +1,4 @@
+##Example
 my_nextlevel_function <- function(filename,fileformat){
   if(fileformat=="csv"){
     fileoutput <- read.csv(filename, header = T,sep = ";")
