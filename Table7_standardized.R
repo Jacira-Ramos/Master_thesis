@@ -1,4 +1,5 @@
 Table_7 <- read.csv('Table_7.csv', sep = ',', header = T)
+Table_7 <- na.omit(Table_7)
 
 empty_res <- matrix(nrow = 2, ncol = ncol(Table_7))
 colnames(empty_res) <- names(Table_7) 
