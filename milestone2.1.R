@@ -22,7 +22,7 @@ for (i in 1:nrow(euclidean_distance_table)){
 test1_results$x
 test1_results$ix
 
-#save it
+#store it
 sorted_distance <- matrix(ncol = 2,nrow = nrow(euclidean_distance_table))
 
 sorted_distance[,2] <- test1_results$x
