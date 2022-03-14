@@ -23,6 +23,8 @@ euclidean_distance_table <- matrix(nrow = nrow(Table7_stand),ncol = nrow(Table7_
 euclidean_distance <- function(a, b) sqrt(sum((a - b)^2)) 
 
 for (i in 1:nrow(Table7_stand)) {
+  col_ind <- seq(1,ncol(euclidean_distance_table))
+  col_ind <- col_ind[-i]
   point <- Table_7[i,]
   
   for (j in 1:nrow(Table7_stand)) {
