@@ -4,12 +4,6 @@
 #temp_results = sort(each_row, index.return=TRUE)
 
 empty_table <- matrix(nrow = nrow(data),ncol=2)
-
-for (i in 1:nrow(data)){
-  extract <-as.numeric(data[1,])
-  sorted <- sort(extract, index.return=TRUE)
-  print(sorted)
- }
  
 for (i in 1:nrow(euclidean_distance_table)){
   each_row <-as.numeric(euclidean_distance_table[1,])
