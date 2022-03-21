@@ -3,21 +3,17 @@
 #each_row = as.numeric(TABLE_7[1,])
 #temp_results = sort(each_row, index.return=TRUE)
 
-empty_table <- matrix(nrow = nrow(data),ncol=2)
- 
-for (i in 1:nrow(euclidean_distance_table)){
-  each_row <-as.numeric(euclidean_distance_table[1,])
-  temp_results <- sort(extract, index.return=TRUE)
-  print(temp_results)
+k_value <- 1
+sorted_distance <- matrix(ncol = k_value+1,nrow = nrow(euclidean_distance_table))
+
+for(i in 1:nrow(euclidean_distance_table)){
+ col_ind <- seq(1,ncol(euclidean_distance_table))
+ col_ind <- col_ind[-i]
+ each_row <- as.numeric(euclidean_distance_table[i,col_ind])
+ temp_results <- sort(each_row,index.return=TRUE)
+ sorted_distance[i,1] <-c(i)
+ sorted_distance[i,2] <- temp_results$ix[1:k_value]
+
 }
 
-#to see the distances by order and with the index
 
-test1_results$x
-test1_results$ix
-
-#store it
-sorted_distance <- matrix(ncol = 2,nrow = nrow(euclidean_distance_table))
-
-sorted_distance[,2] <- test1_results$x
-sorted_distance[,1] <- test1_results$ix
